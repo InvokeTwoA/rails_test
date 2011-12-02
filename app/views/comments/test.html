@@ -1,0 +1,17 @@
+%h2
+  Hello,
+<h1>テストページ<h1>
+
+comment のテンプレートです
+
+<% hello_buhibuhi %>
+<br>
+コントローラー名は<%= controller_name %><br>
+アクション名は<%= action_name %><br>
+
+<% form_for @message do |f| %>
+ <%= f.text_field :name %>
+ <%= f.select "name", ["sports", 'computer'] %>
+ <% f.collection_select(:id, Message.all,:id, :name ) %>
+<% end %>
+

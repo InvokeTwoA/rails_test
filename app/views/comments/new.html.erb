@@ -1,0 +1,24 @@
+<h1>コメント追加画面</h1>
+
+<table class="pikachu">
+<tr>
+ <th>名前</th><td><%= @comment.message.name %></td>
+</tr>
+<tr>
+ <th>投稿日</th><td><%= @comment.message.created_at %></td>
+</tr>
+<tr>
+ <th>コメント</th><td><%= @comment.message.comment %></td>
+</tr>
+</table>
+
+<hr>
+
+<%= form_for [@message, @comment] do |f| %>
+<table class="pikachu">
+<tr><th>入力項目</th><th>入力内容</th></tr>
+<tr><td>name</td><td><%= f.text_field :name %></td></tr>
+<tr><td>comment</td><td><%= f.text_field :comment %></td></tr>
+</table>
+<%= f.submit 'コメントする', :disable_with =>"Sending..." %>
+<% end %>

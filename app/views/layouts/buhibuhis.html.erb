@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>コメントぶひひー</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= stylesheet_link_tag    "messages" %>
+  <%= javascript_include_tag "buhibuhis" %>
+  <script type="text/javascript" src="http://gamequery.onaluf.org/demos/jquery.gamequery.js/demos/jquery.js"></script>
+  <script type="text/javascript" src="http://gamequery.onaluf.org/demos/jquery.gamequery.js/demos/jquery.gamequery.js"></script>
+  <script type="text/javascript" src="http://gamequery.onaluf.org/demos/jquery.gamequery.js/tutorial.final.js"></script>
+  
+  <%= csrf_meta_tags %>
+  <base href="http://localhost:3000/">
+</head>
+<body>
+<h1>JavaScriptテストページ</h1>
+<hr>
+<%= yield %>
+
+<hr>
+
+<a href="messages/">TOPを狙え</a>
+</body>
+</html>

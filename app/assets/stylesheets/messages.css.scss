@@ -1,0 +1,89 @@
+// Place all the styles related to the messages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*BODY全体に関する設定*/
+body {
+	font-size:10px;
+	font-family: Verdana, 'ＭＳ Ｐゴシック', sans-serif;
+	letter-spacing: 1px;
+	text-align: center;
+	scrollbar-3dlight-color: #fff;
+	scrollbar-darkshadow-color: #fff;
+	scrollbar-arrow-color: #000;
+	scrollbar-face-color: #000;
+	scrollbar-highlight-color: #000;
+	scrollbar-shadow-color: #000;
+	scrollbar-track-color: #fff;
+	background-position: center;
+	background-repeat:repeat-y;
+    background-color: #CCFFFF;
+}
+
+/* h1 の設定 */
+h1 {
+	//border: dotted 2px red; 
+	//font-size: 1.45em;
+	padding: 15px; 	
+} 
+
+/* hr の設定 */
+hr {
+} 
+
+/* テーブルの設定 */
+table.pikachu{
+	border-top:1px solid #663300;
+	border-left:1px solid #663300;
+	border-collapse:collapse;
+	border-spacing:0;
+	background-color:#ffffff;
+	empty-cells:show;
+	margin:auto;
+}
+.pikachu th{
+	border-right:1px solid #663300;
+	border-bottom:1px solid #663300;
+	//color:#330000;
+	color: #333;
+	//background-color:#996633;
+	background-color: #FFFFCC;
+	background-image:url(../img/table-back.gif);
+	background-position:left top;
+	padding:0.3em 1em;
+	text-align:center;
+}
+.pikachu td{
+	border-right:1px solid #663300;
+	border-bottom:1px solid #663300;
+	padding:0.3em 1em;
+}
+
+/* エラーメッセージ出力用のテーブルの設定 */
+table.error{
+	border-top:1px solid #663300;
+	border-left:1px solid #663300;
+	border-collapse:collapse;
+	border-spacing:0;
+	background-color:#ffffff;
+	empty-cells:show;
+	margin:auto;
+}
+.error th{
+	border-right:1px solid #663300;
+	border-bottom:1px solid #663300;
+	color:#FFFFFF;
+	//color: #333;
+	background-color:#FF0066;
+	//background-color: #FFFFCC;
+	background-image:url(../img/table-back.gif);
+	background-position:left top;
+	padding:0.3em 1em;
+	text-align:center;
+}
+.error td{
+	border-right:1px solid #663300;
+	border-bottom:1px solid #663300;
+	padding:0.3em 1em;
+}
+

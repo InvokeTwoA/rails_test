@@ -1,0 +1,44 @@
+<h1>詳細ページ</h1>
+
+<table class="pikachu">
+<tr>
+ <th>ID</th><td><%= @message.id %></td>
+</tr>
+<tr>
+ <th>名前</th><td><%= @message.name %></td>
+</tr>
+<tr>
+ <th>投稿日</th><td><%= @message.created_at %></td>
+</tr>
+<tr>
+ <th>コメント</th><td><%= @message.comment %></td>
+</tr>
+</table>
+<%= link_to 'コメントする', new_message_comment_path( @message ) %>
+
+<hr>
+<h3>コメント一覧<h3>
+
+<% @message.comments.each do |comment| %>
+<table class="pikachu">
+<tr>
+ <th>コメントID</th><td><%= comment.id %></td>
+</tr>
+<tr>
+ <th>投稿日時</th><td><%= comment.created_at %></td>
+</tr>
+<tr>
+ <th>更新日時</th><td><%= comment.updated_at %></td>
+</tr>
+<tr>
+ <th>発言者</th><td><%= comment.name %></td>
+</tr>
+<tr>
+ <th>発言内容</th><td><%= comment.comment %></td>
+</tr>
+<tr>
+ <th>削除</th><td><%= link_to '削除', message_comment_path(comment), :method => :delete, :confirm => '本当に削除しますか?' %></td>
+</tr>
+</table>
+<br>
+<% end %>

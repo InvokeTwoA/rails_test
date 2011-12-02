@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+
+
+<h1>redcarpetでの表示 Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(@test.body)  の場合  </h1>
+<%= raw Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(@test.body) %>
+
+
+<hr>
+<h1>データをそのまま出力した場合</h1>
+<%= @test.body %>
+<hr>
+
+
+<%= link_to 'Edit', edit_test_path(@test) %> |
+<%= link_to 'Back', tests_path %>

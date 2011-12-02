@@ -1,0 +1,35 @@
+<h1>コメント編集画面</h1>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Id:</b>
+  <%= @comment.id %>
+</p>
+
+<p>
+  <b>Message:</b>
+  <%= @comment.message_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @comment.name %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%= @comment.comment %>
+</p>
+
+<p>
+  <b>Created at:</b>
+  <%= @comment.created_at %>
+</p>
+
+<p>
+  <b>Updated at:</b>
+  <%= @comment.updated_at %>
+</p>
+
+<%= link_to 'Edit', edit_comment_path(@comment) %>
