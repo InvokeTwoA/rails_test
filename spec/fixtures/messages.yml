@@ -1,0 +1,8 @@
+message_3:
+ id : 3
+ name : 'テスト氏名'
+ comment : 'テストコメント'
+message_5:
+ id : 5
+ name : 'テスト氏名2'
+ comment : 'テストコメント2'

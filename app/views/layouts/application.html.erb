@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>課題</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= stylesheet_link_tag    "messages" %>
+  <%= csrf_meta_tags %>
+  <base href="http://localhost:3000/">
+</head>
+<body>
+こんにちは<%= @login_name %>さん
+<hr>
+<%= yield %>
+
+<hr>
+
+<a href="messages/">TOPページへ</a>
+</body>
+</html>

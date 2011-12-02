@@ -1,0 +1,54 @@
+<h1>TOPページ</h1>
+
+<p id="notice"><%= notice %></p>
+
+<h2>機能一覧</h2>
+<table class="pikachu">
+<tr><th>ページ名</th><th>内容詳細</th></tr>
+<tr><td><%= link_to '新規登録',new_message_path %></td><td>新規登録ができます。</td></tr>
+<tr><td><%= link_to '検索',search_messages_path %></td><td>検索ができます。</td></tr>
+<tr><td><%= link_to 'テスト',test_messages_path %></td><td>他のコントローラーのテンプレートを読み込む</td></tr>
+<tr><td><%= link_to 'JavaScript',buhibuhis_path %></td><td>JacaScript実験場</td></tr>
+<tr><td><%= link_to 'redcarpet',tests_path %></td><td>redcaroet</td></tr>
+</table>
+
+<h2>書き込み一覧</h2>
+<ul>
+<li>メッセージ数合計：<%= @messages.count  %>
+</ul>
+<table class="pikachu">
+<tr>
+ <th>ID
+  <%= link_to_if action_name != 'recent','▼',recent_messages_path %>
+  <%= link_to_if action_name != 'old', '▲',old_messages_path %>
+ </th>
+ <th>投稿日時</th>
+ <th>更新日時
+  <%= link_to '▼',updated_desc_messages_path %>
+  <%= link_to '▲',updated_asc_messages_path %>
+ </th>
+ <th>コメント数
+  <%= link_to '▼',hot_messages_path %>
+  <%= link_to '▲',hot_messages_path %>
+ </th>
+ <th>発言者
+  <%= link_to '▼',name_desc_messages_path %>
+  <%= link_to '▲',name_asc_messages_path %>
+  </th>
+  <th>発言内容</th>
+  <th>編集</th>
+  <th>削除</th>
+ </tr>
+<% @messages.each do |message| %>
+<tr>
+ <td><%= link_to  message.id, message_path(message)  %></td>
+ <td><%= message.created_at %></td>
+ <td><%= message.updated_at %></td>
+ <td><%= message.comments.size %></td>
+ <td><%= message.name %></td>
+ <td><%= message.comment %></td>
+ <td><%= link_to '編集', edit_message_path( message ) %></td>
+ <td><%= link_to '削除', message_path(message), :method => :delete, :confirm => '本当に削除しますか?' %></td>
+</tr>
+<% end %>
+</table>
