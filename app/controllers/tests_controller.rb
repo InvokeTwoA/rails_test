@@ -3,6 +3,7 @@ class TestsController < ApplicationController
 
   # GET /tests
   # GET /tests.json
+  # 一覧画面だー
   def index
     @tests = Test.all
 
@@ -14,6 +15,7 @@ class TestsController < ApplicationController
 
   # GET /tests/1
   # GET /tests/1.json
+  # 詳細画面だー
   def show
     @test = Test.find(params[:id])
 
@@ -25,6 +27,7 @@ class TestsController < ApplicationController
 
   # GET /tests/new
   # GET /tests/new.json
+  # 登録画面だー
   def new
     @test = Test.new
 
