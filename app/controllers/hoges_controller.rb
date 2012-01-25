@@ -12,6 +12,7 @@ class HogesController < ApplicationController
 
   # GET /hoges/1
   # GET /hoges/1.json
+  # 詳細画面
   def show
     @hoge = Hoge.find(params[:id])
 
