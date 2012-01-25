@@ -1,6 +1,7 @@
 class CommentsController < ApplicationController
   layout "comment"
 
+  # うおー
   def new
     @message = Message.find( params[:message_id] )
     @comment = Comment.new( "message_id" => params[:message_id] )
